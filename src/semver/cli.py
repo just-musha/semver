@@ -8,10 +8,10 @@ from github import GithubException
 @click.command()
 @click.argument("repo")
 @click.argument("token")
-@click.option('--version', '-v', required=True, type=click.Choice(['major','minor','patch']), help="version to increment")
-@click.option('--sha', '-s', required=True, help="commit to be tagged")
-@click.option('--message', '-m', default='', help="tag message")
-@click.option('--apply/--no-apply', default=False, help="apply changes on server")
+@click.option('--version', '-v', required=True, type=click.Choice(['major','minor','patch']), help="Version to increment")
+@click.option('--sha', '-s', required=True, help="Commit to be tagged")
+@click.option('--message', '-m', default='', help="Tag message")
+@click.option('--apply/--no-apply', default=False, help="Apply changes on server")
 def cli(repo, token, version, sha, message, apply):
     print(f"Connecting to repo {repo}")
 
